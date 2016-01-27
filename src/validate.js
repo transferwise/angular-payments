@@ -194,7 +194,7 @@ angular.module('angularPayments')
       var validateFn = function(val) {
           var valid = _Validate(type, val, ctrl, scope, attr);
           ctrl.$setValidity(type, valid);
-          return val;
+          return ( valid || type === 'card' ) ? val : undefined;
       };
 
       ctrl.$formatters.push(validateFn);
