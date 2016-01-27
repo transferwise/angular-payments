@@ -189,7 +189,7 @@ angular.module('angularPayments')
         ngModel:'='
     },
     link: function(scope, elem, attr, ctrl){
-
+      alert('debug');
       var type = attr.paymentsValidate;
 
       _ValidateWatch(type, ctrl, scope, attr);
