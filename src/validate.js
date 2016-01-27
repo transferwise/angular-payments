@@ -198,6 +198,7 @@ angular.module('angularPayments')
           var valid = _Validate(type, val, ctrl, scope, attr);
           ctrl.$setValidity(type, valid);
 
+          alert(val);
           //Update ngModel
           scope.ngModel=val;
           return val;
