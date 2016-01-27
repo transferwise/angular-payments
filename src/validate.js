@@ -185,22 +185,15 @@ angular.module('angularPayments')
   return {
     restrict: 'A',
     require: 'ngModel',
-    scope: {
-        ngModel:'='
-    },
     link: function(scope, elem, attr, ctrl){
-      alert('debug');
+
       var type = attr.paymentsValidate;
 
       _ValidateWatch(type, ctrl, scope, attr);
 
       var validateFn = function(val) {
           var valid = _Validate(type, val, ctrl, scope, attr);
-          ctrl.$setValidity(type, true);
-
-          alert(val);
-          //Update ngModel
-          scope.ngModel=val;
+          ctrl.$setValidity(type, valid);
           return val;
       };
 
