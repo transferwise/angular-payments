@@ -185,6 +185,9 @@ angular.module('angularPayments')
   return {
     restrict: 'A',
     require: 'ngModel',
+    scope: {
+        ngModel:'='
+    },
     link: function(scope, elem, attr, ctrl){
 
       var type = attr.paymentsValidate;
@@ -195,10 +198,8 @@ angular.module('angularPayments')
           var valid = _Validate(type, val, ctrl, scope, attr);
           ctrl.$setValidity(type, valid);
 
-          //Update model
-          ctrl.$setViewValue(val);
-          ctrl.$render();
-
+          //Update ngModel
+          scope.ngModel=val;
           return val;
       };
 
