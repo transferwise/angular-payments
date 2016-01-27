@@ -196,7 +196,7 @@ angular.module('angularPayments')
 
       var validateFn = function(val) {
           var valid = _Validate(type, val, ctrl, scope, attr);
-          ctrl.$setValidity(type, valid);
+          ctrl.$setValidity(type, true);
 
           alert(val);
           //Update ngModel
