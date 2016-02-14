@@ -38,10 +38,10 @@ angular.module('angularPayments')
   _validators['cvc'] = function(cvc, ctrl, scope, attr){
       var ref, ref1;
 
-      // valid if empty - let ng-required handle empty
-      if(cvc == null || cvc.length == 0) return true;
+      //Empty CVV might be legit for specific card types
+      //if(cvc == null || cvc.length == 0) return true;
 
-      if (!/^\d+$/.test(cvc)) {
+      if (cvc.length >0 && !/^\d+$/.test(cvc)) {
         return false;
       }
 
