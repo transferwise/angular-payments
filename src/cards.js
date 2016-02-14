@@ -87,6 +87,16 @@ angular.module('angularPayments')
       length: [13, 14, 15, 16],
       cvcLength: [3],
       luhn: true
+    }, {
+      //Mistercash Belgium maestro CVV-free cards
+      type: 'mistercash',
+      brand: 'maestro',
+      pattern: /^6703/,
+      format: defaultFormat,
+      inputFormat: defaultInputFormat,
+      length: [16, 17, 18, 19],
+      cvcLength: [0, 3],
+      luhn: true
     }
   ];
 
