@@ -9,6 +9,11 @@ angular.module('angularPayments')
   ret['parseExpiry'] = function(value){
     var month, prefix, year, _ref;
 
+    if (value == 'Invalid Date') return {
+      month: 0,
+      year: 0
+    };
+
     value = value || ''
 
     value = value.replace(/\s/g, '');
