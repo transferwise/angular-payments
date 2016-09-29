@@ -63,7 +63,7 @@ angular.module('angularPayments')
     }, {
       type: 'mastercard',
       brand: 'mastercard',
-      pattern: /^(?:5[1-5]|2[2-7])/,
+      pattern: /^(5[1-5]|2[2-7])/,
       format: defaultFormat,
       inputFormat: defaultInputFormat,
       length: [16],
