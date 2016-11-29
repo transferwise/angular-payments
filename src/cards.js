@@ -27,7 +27,7 @@ angular.module('angularPayments')
     }, {
       type: 'laser',
       brand: 'laser',
-      pattern: /^(6706|6771|6709)/,
+      pattern: /^(6706|6709)/,
       format: defaultFormat,
       inputFormat: defaultInputFormat,
       length: [16, 17, 18, 19],
