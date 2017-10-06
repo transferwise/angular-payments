@@ -30,7 +30,7 @@ angular.module('angularPayments')
       card = Cards.fromNumber(value + digit);
       length = (value.replace(/\D/g, '') + digit).length;
       
-      upperLength = 16;
+      upperLength = 19;
       
       if (card) {
         upperLength = card.length[card.length.length - 1];
@@ -87,7 +87,7 @@ angular.module('angularPayments')
           e.preventDefault();
         }
       } else {
-        if(!(value.length <= 16)){
+        if(!(value.length <= 19)){
           e.preventDefault();
         }
       }

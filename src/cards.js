@@ -54,7 +54,7 @@ angular.module('angularPayments')
     }, {
       type: 'discover',
       brand: 'discover',
-      pattern: /^(6011|65|64[4-9]|622)/,
+      pattern: /^(6011|65|64[4-9])/,
       format: defaultFormat,
       inputFormat: defaultInputFormat,
       length: [16],

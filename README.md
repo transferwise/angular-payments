@@ -110,7 +110,7 @@ Possible formats:
 ```
 
 - After every 4th character a space (" ") character is added
-- Maximum 16 characters (excluding those spaces)
+- Maximum 19 characters (excluding those spaces)
 - Only digits
 
 #### Expiry
