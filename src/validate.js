@@ -58,6 +58,10 @@ angular.module('angularPayments')
       }
   }
 
+    _validators['unionpay-cvc'] = function() {
+        return true;
+    }
+
   _validators['card'] = function(num, ctrl, scope, attr){
       var card, ref, typeModel;
 
