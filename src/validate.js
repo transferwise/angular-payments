@@ -98,13 +98,11 @@ angular.module('angularPayments')
 
       ctrl.$card = angular.copy(card);
 
-      if(typeModel) {
+      if (typeModel) {
           typeModel.assign(scope, card.type);
       }
-
-      ret = (ref = num.length, __indexOf.call(card.length, ref) >= 0) && (card.luhn === false || _luhnCheck(num));
-
-      return ret;
+      var result = (ref = num.length, __indexOf.call(card.length, ref) >= 0) && (card.luhn === false || _luhnCheck(num));
+      return result;
   }
 
     _validators['phone-number'] = function (phoneNumber) {
