@@ -197,10 +197,6 @@ angular.module('angularPayments')
     elem.bind('keypress', _formatCVC)
   }
 
-    _formats['unionpay-cvc'] = function(elem){
-        elem.bind('keypress', _formatCVC)
-    }
-
   // expiry
 
   _restrictExpiry = function(e) {
