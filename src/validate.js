@@ -58,10 +58,6 @@ angular.module('angularPayments')
       }
   }
 
-    _validators['unionpay-cvc'] = function() {
-        return true;
-    }
-
   _validators['card'] = function(num, ctrl, scope, attr){
       var card, ref, typeModel;
 
@@ -104,15 +100,6 @@ angular.module('angularPayments')
       var result = (ref = num.length, __indexOf.call(card.length, ref) >= 0) && (card.luhn === false || _luhnCheck(num));
       return result;
   }
-
-    _validators['phone-number'] = function (phoneNumber) {
-        if (phoneNumber == null || phoneNumber.length == 0) {
-            return true;
-        }
-        return phoneNumber.length >= 7 && phoneNumber.length <= 15
-            && phoneNumber[0] === '+'
-            && /^\d+$/.test(phoneNumber.substring(1));
-    }
 
   _validators['expiry'] = function(val){
     // valid if empty - let ng-required handle empty
